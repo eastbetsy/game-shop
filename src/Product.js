@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import ModalWindow from './ModalWindow';
+import { useCart } from './useCart';
 import geometry from './images/geometry.avif';
 import terraria from './images/terraria.webp';
 import starsandtime from './images/starsandtime.jpg';
@@ -123,7 +124,7 @@ const Product = () => {
 
   const openModal = (game) => {
     setSelectedGame(game);
-    setQuantity(1); // Reset quantity to 1 when a new game is selected
+    setQuantity(1);
   };
 
   const closeModal = () => setSelectedGame(null);
@@ -146,7 +147,7 @@ const Product = () => {
   };
 
   const handleQuantityChange = (event) => {
-    setQuantity(event.target.value);
+    setQuantity(Number(event.target.value));
   };
 
   const filteredGames = filter === 'All' ? games : games.filter(game => game.genre === filter);
