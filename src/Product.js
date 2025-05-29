@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import ModalWindow from './ModalWindow';
-import { useCart } from './useCart';
+import { useCart } from './CartContext.js';
 import geometry from './images/geometry.avif';
 import terraria from './images/terraria.webp';
 import starsandtime from './images/starsandtime.jpg';
