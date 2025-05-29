@@ -116,7 +116,7 @@ const games = [
 
 const Product = () => {
   const [selectedGame, setSelectedGame] = useState(null);
-  const { cart, addToCart } = useCart();
+  const {addToCart } = useCart();
   const [filter, setFilter] = useState('All');
   const [sortByName, setSortByName] = useState('');
   const [sortByPrice, setSortByPrice] = useState('');
